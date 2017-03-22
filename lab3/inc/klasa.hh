@@ -9,6 +9,10 @@
     int xi;
     T* tablica=nullptr; 
     T* tablica1;
+
+    int xm;
+    T* tablica2x;    
+
     void tworzenie();    
     void wypelnianie();
     void wyswietlanie();
@@ -21,7 +25,12 @@
     void tab2natab1();
     void wypelnianie_plus1();
 
-
+    void nowatabx2();
+    void nowatabx2del();
+    void tab1natab2x();
+    void tab2xnatab1(); 
+    void wypelnianie2x();
+    
     };
 
     template <typename T>
@@ -91,5 +100,40 @@
         std::cout << std::endl;
         }
     }    
+    
+//tablica x2
+
+    template <typename T>
+    void tab<T>::nowatabx2()    {
+        tablica2x = new T [xm];
+    }
+
+    template <typename T>
+    void tab<T>::nowatabx2del() {
+        delete [] tablica2x;
+    }
+
+    template <typename T>
+    void tab<T>::tab1natab2x()  {
+    for (int i=0;i<x;i++)   {
+        tablica2x[i] = tablica[i];
+        }
+    }
+
+    template <typename T>
+    void tab<T>::tab2xnatab1()  {
+    for (int i=0;i<xm;i++)  {
+        tablica[i]=tablica2x[i];
+        }
+    }
+
+    template <typename T>
+    void tab<T>::wypelnianie2x()    {
+        for (int i=x/2;i<xm;i++)    {
+            tablica[i]=rand();
+        }
+    }
+
+
 
 #endif

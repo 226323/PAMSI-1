@@ -9,14 +9,14 @@ class dodawanie
     : public tab<D>
     {
 public:
-    void testplus1()    {
+    void testplus1(int max)    {
         srand(time(NULL));
         tab<D> obiekt;
         obiekt.x=10;
         obiekt.xi=(obiekt.x)+1;
             obiekt.tworzenie();
             obiekt.wypelnianie();
-        for (int i=0;i<100000;i++)  {
+        while (obiekt.x<max) {
             obiekt.nowatabplus1();
             obiekt.tab1natab2();
     //        obiekt.wyswietlanie();
@@ -29,7 +29,7 @@ public:
 //            obiekt.wyswietlanie();
             obiekt.xi++;
        }
-        std::cout << "koniec testu" << std::endl;
+        std::cout << "koniec testu algorytmu zwiększania o 1" << std::endl;
     }
 };
 #endif
