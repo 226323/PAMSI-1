@@ -25,6 +25,7 @@ int main() {
         std::cout << "Podaj liczbę 1 lub 2" << std::endl;
         std::cin >> wybor;
     }
+
     std::cout.setf(std::ios::fixed);            //liczenie czasu
     std::cout.precision(5);
     clock_t start, koniec;
