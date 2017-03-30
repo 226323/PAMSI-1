@@ -6,11 +6,11 @@
 #define RAZY2_HH
 
 template <typename M>
-class mnozenie
-    : public tab<M>
+class mnozenie                  //podklasa, dziedzicząca główną klasę
+    : public tab<M>             
     {
 public:
-    void testrazy2(int max) {
+    void testrazy2(int max) {       //implementacja algorytmu zwiększającego tablicę razy dwa
         srand(time(NULL));
         tab<M> obiekt;
         obiekt.x=10;

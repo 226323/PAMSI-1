@@ -21,4 +21,4 @@ obj/razy2.o: src/razy2.cpp inc/razy2.hh
 
 
 clean:
-	rm -f ${OBJECTS} a.out
+	-rm -rf ${OBJECTS} a.out

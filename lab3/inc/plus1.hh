@@ -5,8 +5,8 @@
 #define PLUS1_HH
 
 template <typename D>
-class dodawanie 
-    : public tab<D>
+class dodawanie                             //podklasa, dziedzicząca główną klasę 
+    : public tab<D>                         //implementacja algorytmu zwiększania tablicy o 1
     {
 public:
     void testplus1(int max)    {
