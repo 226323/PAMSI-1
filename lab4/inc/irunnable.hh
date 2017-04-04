@@ -1,22 +1,15 @@
 #include <iostream>
-#include <cstdlib>
 
-#include "klasa.hh"
-#include "plus1.hh"
-#include "razy2.hh"
-#include "ilist.hh"
-#include "istack.hh"
-#include "iclock.hh"
-#include "irunnable.hh"
+#ifndef IRUNNABLE_HH
+#define IRUNNABLE_HH
 
-int main() {
-
-    irunnable<float> badanie;
-    badanie.run();
-
-}
-
-/*    int max;
+template <typename D>
+class irunnable 
+    : public tab<D>, dodawanie<D>, mnozenie<D>, iclock
+    {
+    public: 
+    void run()  {
+     int max;
     double roznica;
     int wybor;    
 
@@ -56,7 +49,11 @@ int main() {
     mierzenie.koniec=clock();
     roznica=(mierzenie.koniec-mierzenie.start)/(double)CLOCKS_PER_SEC;
     std::cout << "Czas wykonywania algorytmu: " << roznica << std::endl;
-*/
+
+    } 
+
+    };
 
 
 
+#endif

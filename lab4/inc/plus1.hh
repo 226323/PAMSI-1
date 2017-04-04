@@ -1,12 +1,14 @@
 #include <iostream>
 #include <cstdlib>
 #include "klasa.hh"
+#include "iclock.hh"
 #ifndef PLUS1_HH
 #define PLUS1_HH
 
 template <typename D>
 class dodawanie                             //podklasa, dziedzicząca główną klasę 
-    : public tab<D>                         //implementacja algorytmu zwiększania tablicy o 1
+    : public tab<D>             //, iclock
+                                //implementacja algorytmu zwiększania tablicy o 1 
     {
 public:
     void testplus1(int max)    {

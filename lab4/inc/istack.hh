@@ -1,25 +1,73 @@
 #include <stack>
 #include <iostream>
+#include "node.hh"
 
 #ifndef ISTACK_HH
 #define ISTACK_HH
 
 
-struct element
+/*struct element
     {
     int dane;
     element *nastepny;
     };
 
+*/
 
 class istack   
     {                            //klasa istack
+    node* tail;
+    int size;
+    std::string what;
+
 public:
+
+    istack();
     virtual void get(int pozycja)=0;        //pobieranie ze stosu
-    virtual int size()=0;                   //rozmiar stosu
+//    virtual int size()=0;                   //rozmiar stosu
     virtual void push(int element)=0;                   //umieszczanie nowego elementu na stosie
-    virtual int pop(int pozycja)=0;                    //pobieranie elementu ze stosu
+    virtual void pop(int pozycja)=0;                    //pobieranie elementu ze stosu
 };
+
+    istack::istack()    {
+        tail=NULL;
+        size=0;
+        what="stos";
+    }
+
+    void istack::push (int a)   {
+        node * nowy = new node;
+
+        if (tail==NULL) {
+            tail=nowy;
+            nowy->prev=NULL;
+            nowy->next=NULL;
+        }
+        else    {
+            tail->next=nowy;
+            nowy->prev=tail;
+            tail=nowy;
+            nowy->next=NULL; 
+        }
+
+        nowy->value=a;
+        size++;
+
+    }
+    
+ /*   void istack::pop(node *a)   {
+        
+        if (a->prev==NULL)  {
+            tail=NULL;
+        }
+
+        if (a->prev!=NULL && a->next!=NULL) {
+            a->prev->netx       
+ 
+
+    }
+*/
+
 /*
     void push(element **S) {
         element *temp = new element;
@@ -36,8 +84,7 @@ public:
     }
 
 */
-#endif
-
+/*
 class klasa_czas        //ponieważ czas mierzyłem bez tworzenia dodatkowej klasy czas nie póki co tworzę pustą klasę, na którą później przeniosę mierzenie czasu wykonywania algorytmu
                         
 {
@@ -70,7 +117,7 @@ class stack
 
                     
 
-    };
+    };*/
 
 //tak, podzielę to wszystko na moduły ale na labach chciałem mieć to w jednym pliku, by mieć wszystko obok i wiedzieć co do czego
 
@@ -92,4 +139,8 @@ zmierzenie czasu operacji find ("ma mieć tyletam elementów") na samym końcu i
 O(n)
 =/=O(1)
 =/=O(n^2)
+10^9
 */
+
+
+#endif
