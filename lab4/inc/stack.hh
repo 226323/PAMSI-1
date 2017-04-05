@@ -44,20 +44,23 @@ public:
 
     }
     
-    void pop(node *a)   {
+    void pop(node* tail)   {
         
-        if (a->prev==nullptr && a->next!=nullptr)  {
-            a->next->prev=nullptr;
-            head=a->next;
+    std::cout <<"pop test 1 \n";
+        if (tail->prev==nullptr && tail->next!=nullptr)  {
+            tail->next->prev=nullptr;
+            head=tail->next;
         }
-   
-        if (a->prev!=NULL && a->next!=NULL) {
-            a->prev->next=a->next;
-            a->next->prev=a->prev;
+     std::cout <<"pop test 2 \n";
+
+        if (tail->prev!=NULL && tail->next!=NULL) {
+            tail->prev->next=tail->next;
+            tail->next->prev=tail->prev;
         }
+    std::cout <<"pop test 3 \n";
 
         size --;
-        delete a;
+        delete tail;
     }
 
     void print()    {
@@ -73,6 +76,21 @@ public:
     int get_size()  {
         return size;
     }
+
+
+
+    node* find_value(int b){
+    std::cout << "find test 1";
+	    	while(size){
+		    	if(tail->value==b){
+				    return tail;
+    			} 
+    			void pop(node* tail);
+    		}
+    		std::cout <<"brak ";
+    		return nullptr;
+    	}
+
 
 
 

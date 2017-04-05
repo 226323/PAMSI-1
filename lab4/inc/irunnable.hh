@@ -59,13 +59,13 @@ class irunnable
     }    
 
     case 3:
-//        int a=r;
         stack obiekt1;
         for (int i=0; i<max;i++)    {
         obiekt1.push(max);
         }
         obiekt1.print();
-//        }
+        std::cout << "irrun test 1 \n";
+//        obiekt1.find_value(2137);
     } 
 
     mierzenie.koniec=clock();
