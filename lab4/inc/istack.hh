@@ -1,6 +1,7 @@
 #include <stack>
 #include <iostream>
 #include "node.hh"
+#include <cstdlib>
 
 #ifndef ISTACK_HH
 #define ISTACK_HH
@@ -13,28 +14,31 @@
     };
 
 */
-
 class istack   
-    {                            //klasa istack
-    node* tail;
+    {  
+    public:                          //klasa istack
+    /*node* tail;
+    node* head;
     int size;
     std::string what;
+*/
 
-public:
-
-    istack();
-    virtual void get(int pozycja)=0;        //pobieranie ze stosu
+    //stack();
+//    virtual void get(int pozycja)=0;        //pobieranie ze stosu
 //    virtual int size()=0;                   //rozmiar stosu
     virtual void push(int element)=0;                   //umieszczanie nowego elementu na stosie
-    virtual void pop(int pozycja)=0;                    //pobieranie elementu ze stosu
-};
+    virtual void pop(node *a)=0;                    //pobieranie elementu ze stosu
+    virtual int get_size()=0;
+    virtual void print()=0;
 
-    istack::istack()    {
+    };
+
+ /*   istack::istack()    {
         tail=NULL;
         size=0;
         what="stos";
-    }
-
+    } */
+/*
     void istack::push (int a)   {
         node * nowy = new node;
 
@@ -55,19 +59,36 @@ public:
 
     }
     
- /*   void istack::pop(node *a)   {
+    void istack::pop(node *a)   {
         
-        if (a->prev==NULL)  {
-            tail=NULL;
+        if (a->prev==nullptr && a->next!=nullptr)  {
+            a->next->prev=nullptr;
+            head=a->next;
+        }
+   
+        if (a->prev!=NULL && a->next!=NULL) {
+            a->prev->next=a->next;
+            a->next->prev=a->prev;
         }
 
-        if (a->prev!=NULL && a->next!=NULL) {
-            a->prev->netx       
- 
+        size --;
+        delete a;
+    }
 
+    void istack::print()    {
+        node* tmp;
+        tmp=tail;
+
+        for (int i=size;i>0; i--)   {
+            std::cout << tmp-> value << "\n";
+            tmp=tmp->prev;
+        }
+    }
+
+    int istack::get_size()  {
+        return size;
     }
 */
-
 /*
     void push(element **S) {
         element *temp = new element;

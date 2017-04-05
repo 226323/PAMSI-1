@@ -7,11 +7,13 @@
 #include "ilist.hh"
 #include "istack.hh"
 #include "iclock.hh"
+#include "stack.hh"
 #include "irunnable.hh"
+#include "node.hh"
 
 int main() {
-
-    irunnable<float> badanie;
+srand(time(NULL));
+    irunnable<int> badanie;
     badanie.run();
 
 }

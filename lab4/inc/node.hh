@@ -6,11 +6,11 @@
 
 class node   {           
 
+    public:
     node *prev;
     node *next;
     int value;
 
-public:
     node()  {
         prev=NULL;
         next=NULL;
