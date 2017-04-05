@@ -7,13 +7,6 @@
 #define STACK_HH
 
 
-/*struct element
-    {
-    int dane;
-    element *nastepny;
-    };
-
-*/
 class stack   
     : public istack
     {      
@@ -31,13 +24,14 @@ public:
         what="stos";
     }
 
-    void push (int a)   {
+    void push (int max)   {
         node * nowy = new node;
 
         if (tail==NULL) {
             tail=nowy;
             nowy->prev=NULL;
             nowy->next=NULL;
+//            nowy->value = 2137;
         }
         else    {
             tail->next=nowy;
@@ -46,7 +40,7 @@ public:
             nowy->next=NULL; 
         }
 
-        nowy->value=a;
+        nowy->value=rand();
         size++;
 
     }

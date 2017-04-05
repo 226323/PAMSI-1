@@ -59,11 +59,13 @@ class irunnable
     }    
 
     case 3:
-        int a=10;
+//        int a=r;
         stack obiekt1;
         for (int i=0; i<max;i++)    {
-        obiekt1.push(a);
+        obiekt1.push(max);
         }
+        obiekt1.print();
+//        }
     } 
 
     mierzenie.koniec=clock();
