@@ -1,0 +1,13 @@
+sortowanie szybkie
+
+przypadki:
+- losowe ułożenie elem.
+- posortowanie rosnąco
+- posortowane malejąco
+
+metody wyboru piwota
+
+- jakie są?
+wybrać 3 i sprawdzić jak wpływają na przypadku pesymistycznym (na złożoność)
+
+

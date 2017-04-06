@@ -1,0 +1,1 @@
+Plik istnieje tylko po to, by git nie ignorował pustego folderu obj/ podczas pushowania
