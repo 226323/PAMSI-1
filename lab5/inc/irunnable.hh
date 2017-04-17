@@ -124,8 +124,7 @@ class irunnable
         obiekt1.print();
         mierzenie.start=clock();
         std::cout << "testirun ";
-
-        obiekt1.find_value(2137);
+        obiekt1.find_value(2137);   
     break;
     }
 

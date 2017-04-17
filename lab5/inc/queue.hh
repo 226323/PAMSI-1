@@ -70,17 +70,17 @@ public:
 
 
     void remove()   {
-        if (head->prev==NULL && head->next!=NULL)    {
-            head->next->prev=NULL;
+        if (head->prev==nullptr && head->next!=nullptr)    {
+            head->next->prev=nullptr;
             head=head->next;
         }
 
-        if (head->prev!=NULL && head->next!=NULL) {
+        if (head->prev!=nullptr && head->next!=nullptr) {
             head->prev->next=head->next;
             head->next->prev=head->prev;
         }
 
-        if (head->next==NULL && head->prev!=NULL) {
+        if (head->next==nullptr && head->prev!=nullptr) {
             head->prev->next=nullptr;
             tail=head->prev;
         }
@@ -89,10 +89,13 @@ public:
     }
 
     node* find_value(int b)  {
-        while (size)    {
+        std::cout << "test value ";
+        for (int i=size; i>0;i--)   {
+        std::cout << "test find value ";
             if (head->value==b) {
-                return head;
+//                return head;
             }
+            
             remove(); 
             }
         return nullptr;
