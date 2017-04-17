@@ -43,36 +43,38 @@ public:
         size++;
 
     }
-    
-    void pop(node* tail)   {
+   
+    void pop(){
         
-    std::cout <<"pop test 1 \n";
         if (tail->prev==nullptr && tail->next!=nullptr)  {
             tail->next->prev=nullptr;
-            head=tail->next;
+//            head=tail->next;
         }
-     std::cout <<"pop test 2 \n";
 
         if (tail->prev!=NULL && tail->next!=NULL) {
             tail->prev->next=tail->next;
             tail->next->prev=tail->prev;
         }
-    std::cout <<"pop test 3 \n";
+        
+        if (tail->next==nullptr && tail->prev!=nullptr) {
+            tail->prev->next=nullptr;
+            tail=tail->prev;
+        }
 
-        size --;
-        delete tail;
+//      std::cout << "pop";
+        size--;
+//        delete tail;
     }
 
     void print()    {
         node* tmp;
         tmp=tail;
-
         for (int i=size;i>0; i--)   {
             std::cout << tmp-> value << "\n";
             tmp=tmp->prev;
          }
     }
-
+    
     int get_size()  {
         return size;
     }
@@ -80,20 +82,21 @@ public:
 
 
     node* find_value(int b){
-    std::cout << "find test 1";
 	    	while(size){
 		    	if(tail->value==b){
+                    std::cout << "znaleziono\n";
 				    return tail;
     			} 
-    			void pop(node* tail);
+                else {
+//                    stack::print(); 
+//                    std::cout <<"zmniejszanie stosu\n";
+                    stack::pop();
+                    size--;
+                }
     		}
-    		std::cout <<"brak ";
+    		std::cout <<"\nbrak\n";
     		return nullptr;
     	}
-
-
-
-
 
 };
 

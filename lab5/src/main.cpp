@@ -5,12 +5,17 @@
 #include "plus1.hh"
 #include "razy2.hh"
 #include "ilist.hh"
+#include "list.hh"
 #include "istack.hh"
 #include "iclock.hh"
 #include "stack.hh"
-#include "irunnable.hh"
+//#include "irunnable.hh"
 #include "node.hh"
 #include "quicksort.hh"
+#include "iqueue.hh"
+#include "queue.hh"
+#include "irunnable.hh"
+
 
 int main() {
 srand(time(NULL));

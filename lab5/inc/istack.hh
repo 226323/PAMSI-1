@@ -27,7 +27,7 @@ class istack
 //    virtual void get(int pozycja)=0;        //pobieranie ze stosu
 //    virtual int size()=0;                   //rozmiar stosu
     virtual void push(int element)=0;                   //umieszczanie nowego elementu na stosie
-    virtual void pop(node* tail)=0;                    //pobieranie elementu ze stosu
+    virtual void pop()=0;//node* tail)=0;                    //pobieranie elementu ze stosu
     virtual int get_size()=0;
     virtual void print()=0;
     virtual node* find_value(int b)=0;
