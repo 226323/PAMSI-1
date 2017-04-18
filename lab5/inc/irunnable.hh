@@ -6,7 +6,7 @@
 
 template <typename D>
 class irunnable 
-    : public tab<D>, dodawanie<D>, mnozenie<D>, iclock, stack, sort<D>
+    : public dodawanie<D>, mnozenie<D>, iclock, stack, sort<D>
     {
     public: 
     void run()  {
@@ -26,11 +26,11 @@ class irunnable
     std::cout << "3 - Przeszukiwanie stosu \n";
     std::cout << "4 - Przeszukiwanie listy \n";
     std::cout << "5 - Przeszukiwanie kolejki \n";
-//    std::cout << "6 - quick sort \n";
+    std::cout << "6 - quick sort \n";
     std::cin >> wybor;
 
 
-    while (wybor!=1 && wybor!=2 && wybor!=3 && wybor!=4 && wybor!=5)  {
+    while (wybor!=1 && wybor!=2 && wybor!=3 && wybor!=4 && wybor!=5 && wybor!=6)  {
         std::cout << "Podaj liczbę 1 lub 2" << std::endl;
         std::cin >> wybor;
     }
@@ -130,18 +130,21 @@ class irunnable
 
 
 
-    /*
-    case 4:
+    
+    case 6:
     {
         sort<D> obiekt1;
-        obiekt1.testplus1(max);
+        //obiekt1.testrazy2(max);
+        std::cout << "test1";
+        std::cout << std::endl;
+        obiekt1.tworzenie(max);
+        std::cout << "wypelnianie "<< std::endl;
+        obiekt1.wypelnianie(max);
+        std::cout << "test" << std::endl;
         obiekt1.przepisywanie(max);
-        obiekt1.drukuj_tablice_sortowania(max);
+        //obiekt1.drukuj_tablice_sortowania(max);
     break;
-    }*/
-
-
-
+    }
 
 
 

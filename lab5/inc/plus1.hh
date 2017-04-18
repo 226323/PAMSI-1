@@ -7,7 +7,7 @@
 
 template <typename D>
 class dodawanie                             //podklasa, dziedzicząca główną klasę 
-    : public tab<D>             //, iclock
+    : public tab<D>           
                                 //implementacja algorytmu zwiększania tablicy o 1 
     {
 public:

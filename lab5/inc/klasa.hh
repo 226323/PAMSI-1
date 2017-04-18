@@ -3,7 +3,7 @@
 #define KLASA_HH
     template <typename T>
     class tab
-     {                         //główna klasa, w której definiuję metody potrzebne do sprawdzania algorytmów
+     {
     public:
     int x;
     int xi;
