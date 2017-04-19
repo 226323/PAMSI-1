@@ -49,19 +49,20 @@ public:
             
             }
             else    {
-            
+             
             T* tab1Ln = nullptr;
             
-            tab1Ln= new T [j];
+            tab1Ln= new T [j+1];
             for (int l=0; l<j;l++)  {   
                 tab1Ln[l]=tab1L[l];
             }
-            //j++;
+            
             delete [] tab1L;
-            tab1L = new T [j];
+            tab1L = new T [j+1];
             for (int l=0;l<j;l++)   {
                 tab1L[l]=tab1Ln[l];
             }
+            
             tab1L[j]=quicktab[i];
             j++;
             }
@@ -85,13 +86,13 @@ public:
             
             T* tab1Rn = nullptr;
             
-            tab1Rn= new T [k];
+            tab1Rn= new T [k+1];
             for (int l=0; l<k;l++)  {   
                 tab1Rn[l]=tab1R[l];
             }
             //j++;
             delete [] tab1R;
-            tab1R = new T [k];
+            tab1R = new T [k+1];
             for (int l=0;l<k;l++)   {
                 tab1R[l]=tab1Rn[l];
             }
@@ -104,7 +105,7 @@ public:
     for (int i=0;i<m;i++)   {
     tab1P[i]=piwot;
     }
-/*
+
     std::cout << "\n tab1L \n";
     for (int i=0;i<j;i++){
         std::cout <<tab1L[i] << " \n";}
@@ -116,7 +117,7 @@ public:
     for (int i=0;i<k;i++){
          std::cout <<tab1R[i] << " \n";
     }
- */    
+    
  
 
 
