@@ -11,11 +11,11 @@ class sort  {
     
     void wypelnianie(int max)   {
         for (int i=0;i<max;i++) {
-            quicktab[i]=rand()%10000;
+            quicktab[i]=max-i;
         }
     }
     
-    T* zwracanie(int max) {
+    T* zwracanie() {
         return quicktab;
     }
     

@@ -151,8 +151,8 @@ class irunnable
         obiekt1.tworzenie(max);
         obiekt1.wypelnianie(max);
         mierzenie.start=clock();
-        obiekt1.partition(obiekt1.zwracanie(max),0, max);
-        obiekt1.quickSort(obiekt1.zwracanie(max),0, max);
+        obiekt1.partition(obiekt1.zwracanie(),0, max);
+        obiekt1.quickSort(obiekt1.zwracanie(),0, max);
     break;
     }
 
