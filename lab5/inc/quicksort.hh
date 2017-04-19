@@ -36,15 +36,10 @@ public:
         int m=0;
 //        tab1L = new T [max];
         tab1P = new T [max];
-        tab1R = new T [max];
-        int ilosc_zer=0; 
-    for (int i=0; i<max; i++)   {
-            if (quicktab[i]==0) {
-            ilosc_zer++;
-            }
-           } 
-    std::cout << "ilosc zer to: " << ilosc_zer <<std::endl;    
+//        tab1R = new T [max];
+            
 
+       
     for (int i=0; i<max; i++)   {
         if (quicktab[i]<piwot)   {
             if (j==0)   {
@@ -56,7 +51,7 @@ public:
             else    {
             
             T* tab1Ln = nullptr;
-            j++;
+            
             tab1Ln= new T [j];
             for (int l=0; l<j;l++)  {   
                 tab1Ln[l]=tab1L[l];
@@ -67,24 +62,63 @@ public:
             for (int l=0;l<j;l++)   {
                 tab1L[l]=tab1Ln[l];
             }
-           // j++;
+            tab1L[j]=quicktab[i];
+            j++;
             }
-            
         }
-        
-        if (quicktab[i]=piwot)   {
+         
+        if (quicktab[i]==piwot)   {          //ogarnąć
             tab1P[m]=quicktab[i];
             m++;
         }
 
         if (quicktab[i]>piwot)   {
+ //           tab1R[k]=quicktab[i];
+ //           k++;
+           if (k==0)   {
+            k++;
+            tab1R = new T [1];
+            tab1R[0]=quicktab[i];   
+             
+            }
+            else    {
+            
+            T* tab1Rn = nullptr;
+            
+            tab1Rn= new T [k];
+            for (int l=0; l<k;l++)  {   
+                tab1Rn[l]=tab1R[l];
+            }
+            //j++;
+            delete [] tab1R;
+            tab1R = new T [k];
+            for (int l=0;l<k;l++)   {
+                tab1R[l]=tab1Rn[l];
+            }
             tab1R[k]=quicktab[i];
             k++;
+            }
         }
     }
+    
+    std::cout << "\n tab1L \n";
     for (int i=0;i<j;i++){
-    std::cout <<tab1L[i] << " \n";
+        std::cout <<tab1L[i] << " \n";}
+        std::cout << "\n tab1P \n";
+    for (int i=0;i<m;i++){
+        std::cout <<tab1P[i] << " \n";
     }
+        std::cout << "\n tab1R \n";
+    for (int i=0;i<k;i++){
+         std::cout <<tab1R[i] << " \n";
+    }
+     
+ 
+
+
+
+
+
     }
 
 
