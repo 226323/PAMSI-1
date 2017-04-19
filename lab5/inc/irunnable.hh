@@ -141,7 +141,7 @@ class irunnable
         std::cout << "wypelnianie "<< std::endl;
         obiekt1.wypelnianie(max);
         std::cout << "test" << std::endl;
-        obiekt1.przepisywanie(max);
+        obiekt1.przepisywanie(0, max);
         //obiekt1.drukuj_tablice_sortowania(max);
     break;
     }
