@@ -16,37 +16,36 @@ public:
     void tworzenie(int max)    {
     quicktab = new T [max];
     }
-    void wypelnianie(int max)   {
+    int* wypelnianie(int max)   {
         for (int i=0;i<max;i++) {
             quicktab[i]=rand()%10000;
-        }
+        }   
+    return quicktab;
     }
 
    
-    void przepisywanie(int min, int max);
+    void przepisywanie(T* quicktab, int max);
     void drukuj_tablice_sortowania(int max);
     };
 
     template <typename T>
-    void sort<T>::przepisywanie(int min, int max)    {
+    void sort<T>::przepisywanie(T* quicktab, int max)    {
         T piwot=quicktab[0];
-        std::cout << piwot<< " piwot \n";
+        std::cout << "\n" << piwot<< " piwot \n";
         int j=0;
         int k=0;
         int m=0;
 //        tab1L = new T [max];
-        tab1P = new T [max];
+//        tab1P = new T [max];
 //        tab1R = new T [max];
             
 
-       
     for (int i=0; i<max;i++)   {
         if (quicktab[i]<piwot)   {
             if (j==0)   {
             j++;
             tab1L = new T [1];
             tab1L[0]=quicktab[i];   
-            
             }
             else    {
              
@@ -114,13 +113,13 @@ public:
     int minnP=j;
     int maxnP=max-j;
     int jj=0;
+    int mm=0;
     for (int i=0;i<j;i++) {
         if (i<j)    {
             quicktab[i]=tab1L[i];
             jj++;
         }
     
-    int mm=0;
         if (i>=j)   {
             
 //        if (i>=j)   {
@@ -128,29 +127,25 @@ public:
         mm++;
     }
     }
-
+/*
     std::cout << "\n tab1L \n";
     for (int i=0;i<j;i++){
         std::cout <<tab1L[i] << " \n";}
-/*        std::cout << "\n tab1P \n";
-    for (int i=0;i<m;i++){
-        std::cout <<tab1P[i] << " \n";
-    }*/
         std::cout << "\n tab1R \n";
     for (int i=0;i<k;i++){
          std::cout <<tab1R[i] << " \n";
     }
-    
+   */ 
     std::cout << "\n quicktab \n";
         for (int i=0;i<max;i++)   {
             std::cout << quicktab[i] << "\n";
         }
-    /*        
+    
     while (j>3 && (maxnP>3)) { 
-    przepisywanie(minnL, maxnL);
-    przepisywanie(minnP, maxnP);
+    przepisywanie(tab1L,j);
+    przepisywanie(tab1R,mm);
     }
-*/
+
 
 
 
