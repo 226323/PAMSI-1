@@ -134,14 +134,12 @@ class irunnable
     case 6:
     {
         sort<D> obiekt1;
-        //obiekt1.testrazy2(max);
-        std::cout << "test1";
         std::cout << std::endl;
         obiekt1.tworzenie(max);
         std::cout << "wypelnianie "<< std::endl;
         obiekt1.wypelnianie(max);
         std::cout << "test" << std::endl;
-        obiekt1.przepisywanie(quicktab,max);
+        obiekt1.przepisywanie(obiekt1.zwracanie(max),max);
         //obiekt1.drukuj_tablice_sortowania(max);
     break;
     }

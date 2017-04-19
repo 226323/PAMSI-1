@@ -16,12 +16,15 @@ public:
     void tworzenie(int max)    {
     quicktab = new T [max];
     }
-    int* wypelnianie(int max)   {
+    void wypelnianie(int max)   {
         for (int i=0;i<max;i++) {
             quicktab[i]=rand()%10000;
         }   
-    return quicktab;
     }
+    
+    T* zwracanie(int max) {
+        return quicktab;
+    } 
 
    
     void przepisywanie(T* quicktab, int max);
@@ -140,7 +143,7 @@ public:
         for (int i=0;i<max;i++)   {
             std::cout << quicktab[i] << "\n";
         }
-    
+    std::cout << std::endl; 
     while (j>3 && (maxnP>3)) { 
     przepisywanie(tab1L,j);
     przepisywanie(tab1R,mm);
