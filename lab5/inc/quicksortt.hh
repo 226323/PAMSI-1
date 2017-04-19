@@ -15,7 +15,7 @@ class sort  {
         }
     }
     
-    int* zwracanie(int max) {
+    T* zwracanie(int max) {
         return quicktab;
     }
     
@@ -25,7 +25,7 @@ class sort  {
         *b=t;
     }
 
-int partition (int quicktab[], int l, int h)
+int partition (T quicktab[], int l, int h)
 {
     int x = quicktab[h];
     int i = (l - 1);
@@ -45,7 +45,7 @@ int partition (int quicktab[], int l, int h)
 /* A[] --> Array to be sorted, 
   l  --> Starting index, 
   h  --> Ending index */
-void quickSort(int A[], int l, int h)
+void quickSort(T A[], int l, int h)
 {
     if (l < h)
     {        
@@ -54,6 +54,8 @@ void quickSort(int A[], int l, int h)
         quickSort(A, l, p - 1);  
         quickSort(A, p + 1, h);
     }
+    
 }
+
 };
 #endif
