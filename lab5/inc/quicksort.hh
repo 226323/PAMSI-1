@@ -143,10 +143,12 @@ public:
         for (int i=0;i<max;i++)   {
             std::cout << quicktab[i] << "\n";
         }
+    T* tabL=tab1L;
+    T* tabR=tab1R;
     std::cout << std::endl; 
     while (j>3 && (maxnP>3)) { 
-    przepisywanie(tab1L,j);
-    przepisywanie(tab1R,mm);
+    przepisywanie(tabL,j);
+    przepisywanie(tabR,mm);
     }
 
 

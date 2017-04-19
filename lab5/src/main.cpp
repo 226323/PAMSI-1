@@ -11,11 +11,11 @@
 #include "stack.hh"
 //#include "irunnable.hh"
 #include "node.hh"
-#include "quicksort.hh"
+//#include "quicksort.hh"
 #include "iqueue.hh"
 #include "queue.hh"
 #include "irunnable.hh"
-
+#include "quicksortt.hh"
 
 int main() {
 srand(time(NULL));
