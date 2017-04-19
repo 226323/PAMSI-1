@@ -68,14 +68,14 @@ public:
         }
          
         if (quicktab[i]==piwot)   {          //ogarnąć
-            tab1P[m]=quicktab[i];
+//            tab1P[m]=quicktab[i];
             m++;
         }
 
         if (quicktab[i]>piwot)   {
  //           tab1R[k]=quicktab[i];
  //           k++;
-           if (k==0)   {
+            if (k==0)   {
             k++;
             tab1R = new T [1];
             tab1R[0]=quicktab[i];   
@@ -100,7 +100,11 @@ public:
             }
         }
     }
-    
+    tab1P = new T [m+1];
+    for (int i=0;i<m;i++)   {
+    tab1P[i]=piwot;
+    }
+/*
     std::cout << "\n tab1L \n";
     for (int i=0;i<j;i++){
         std::cout <<tab1L[i] << " \n";}
@@ -112,7 +116,7 @@ public:
     for (int i=0;i<k;i++){
          std::cout <<tab1R[i] << " \n";
     }
-     
+ */    
  
 
 

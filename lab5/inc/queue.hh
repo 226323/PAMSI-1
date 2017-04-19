@@ -71,33 +71,30 @@ public:
 
     void remove()   {
         if (tail->prev==nullptr && tail->next!=nullptr)    {
-            std::cout << "remove 1 ";
             tail->next->prev=nullptr;
-            tail=tail->next;
+            //tail=tail->prev;
         }
 
         if (tail->prev!=nullptr && tail->next!=nullptr) {
             tail->prev->next=tail->next;
-            tail->next->prev=tail->prev;
+            tail->next->prev=tail->prev->prev;
         }
 
         if (tail->next==nullptr && tail->prev!=nullptr) {
-            tail->prev->next=nullptr;
+            tail->prev->prev=nullptr;
             tail=tail->prev;
         }
     size--;
-    delete tail;
+    delete tail->prev;
+  //  tail->prev=tail;
     }
 
     node* find_value(int b)  {
-        std::cout << "test value ";
         for (int i=size; i>0;i--)   {
-        std::cout << "test find value ";
             if (tail->value==b) {
                 std::cout << "znaleziono ";
                return tail;
             }
-            
             remove(); 
             }
         return nullptr;
