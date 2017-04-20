@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "quicksortt.hh"
+#include "quicksort.hh"
 #ifndef IRUNNABLE_HH
 #define IRUNNABLE_HH
 
@@ -151,8 +151,8 @@ class irunnable
         obiekt1.tworzenie(max);
         obiekt1.wypelnianie(max);
         mierzenie.start=clock();
-        obiekt1.partition(obiekt1.zwracanie(),0, max);
-        obiekt1.quickSort(obiekt1.zwracanie(),0, max);
+        obiekt1.dzielenie(obiekt1.zwracanie(),0, max);
+        obiekt1.sortowanie(obiekt1.zwracanie(),0, max);
     break;
     }
 
